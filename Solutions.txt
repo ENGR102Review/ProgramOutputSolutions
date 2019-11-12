@@ -1,0 +1,122 @@
+1. What is the output of the following code?
+
+for i in range(2, 17, 5):
+	if i % 2 == 0:
+		print(i, i * 2)
+	else:
+		print(i, i + 1)
+    
+    
+ANSWER:
+2 4
+7 8
+12 24
+
+
+
+2. What is the output of the following code?
+
+x = 10
+y = 16
+while y - x < 25:
+	x = x - 1
+	y = y + 3
+	print(y)
+
+
+ANSWER:
+19
+22
+25
+28
+31
+
+
+
+3. What is the output of the following code?
+
+a = 5
+b = 16
+c = a
+b = b // c
+print(c * a + b)
+
+
+ANSWER:
+28
+
+
+
+4. What is the output of the following code?
+
+n = 3
+my_str = '10'
+k = True
+if n + int(my_str) < 12:
+	print(‘Happy’)
+elif k or my_str == 'hello':
+	print('Lucky')
+else:
+	print('Sad')
+  
+  
+ANSWER:
+Lucky
+
+
+
+5. What is the output of the following code?
+
+def my_function(a, b):
+	if a < b:
+		return 'bad'
+	elif a == b:
+		return 'ok'
+	else:
+		return 'good'
+
+
+s = 20
+p = s % 16
+j = my_function(20, s)
+print(s, p, j, my_function(p, s))
+
+
+ANSWER:
+20 4 ok bad
+
+
+
+6. What is the output of the following code?
+
+my_year = 2018
+first_6_months = 'Jan,Feb,Mar,Apr,May,Jun'
+my_month = first_6_months.split(',')[3]
+my_day = int('6') + (18 // 7) + int(16.75)
+my_date = my_month + ' ' + str(my_day) + ', ' + str(my_year)
+print(my_date)
+
+
+ANSWER:
+Apr 24, 2018
+
+
+
+7. What is the output of the following code?
+
+animal_list = ['green dog', 'red cat', 'green rabbit', 'orange pig',
+'white raccoon', 'purple cow', 'blue cat', 'green chicken']
+good_animals = {}
+while len(animal_list) > 0:
+	animal = animal_list.pop().split(' ')
+	if 'green' in animal:
+		good_animals[animal[1]] = animal[0]
+
+print(len(good_animals.keys()))
+print(len(animal_list))
+
+
+ANSWER:
+3
+0
+
