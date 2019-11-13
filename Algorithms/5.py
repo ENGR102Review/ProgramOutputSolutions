@@ -1,8 +1,7 @@
+# a list to perform statistics on
 my_grades = [56, 71, 74, 75, 61, 55, 53, 90, 96, 88, 59, 64, 67, 62, 77, 70, 89, 60, 57, 87]
 
-# these are starter variables.
-# notice they are outside of the for-loop
-
+# these are starter variables. notice they are outside of the for-loop
 # before you even start going through the list, you haven't summed anything, so the sum is 0
 sum_of_items = 0
 # for now, assume that the first element is the smallest (this can change later)
