@@ -10,8 +10,7 @@ point_B = (24, 8)
 # (y2 - y1) / (x2 - x1)
 slope = (point_B[1] - point_A[1]) / (point_B[0] - point_A[0])
 
-# now do the interpolation at x = 22.5
-
+# this is an x-value between the x-values of point A and point B
 x_value_to_interpolate = 22.5
 
 # this finds the change in x between the interpolation point and the lower x-value of the two original points
