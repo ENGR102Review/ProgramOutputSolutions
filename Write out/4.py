@@ -12,7 +12,7 @@ def caesar_cipher(original_string):
     # go through each individual character in the original string
     for character in original_string:
         # check if the character is not alphabetic. 
-        # If not, append the character as-is and move on to the next iteration
+        # If not, append the character as-is and move on to the next character in the string
         if character not in caesar_alphabet:
             new_string += character
             continue
