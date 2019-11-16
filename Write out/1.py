@@ -1,5 +1,5 @@
 # get the highest degree of the polynomial from the user
-highest_degree = int(input('Please enter the highest degree in your polynomial (i.e. 3 for a cubic function):'))
+highest_degree = int(input('Please enter the highest degree in your polynomial:'))
 
 # this will hold the user's input for coefficients
 # the indexes of each coefficient will match the powers of x that the coefficient is associated with
