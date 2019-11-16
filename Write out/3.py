@@ -33,12 +33,14 @@ total_area_2 = 0
 for i in range(0, 60):
     # the area of the rectangle is the base multiplied by the function value at the x position
     total_area_1 += rectangle_base_1 * f_1(current_x_1)
+    # update the x value for the next iteration
     current_x_1 += rectangle_base_1
 
 # compute the area of rectangles in for-loop
 for i in range(0, 100):
     # the area of the rectangle is the base multiplied by the function value at the x position
     total_area_2 += rectangle_base_2 * f_2(current_x_2)
+    # update the x value for the next iteration
     current_x_2 += rectangle_base_2
 
 # print descriptive output
