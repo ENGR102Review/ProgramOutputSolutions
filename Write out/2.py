@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 
 def f_1(x):
@@ -15,33 +16,27 @@ def f_2(x):
     return math.e ** x
 
 
-x_interval_1 = 3  # size of interval for first function is 5 - 2 = 3
-x_interval_2 = 4  # size of interval for second function is 4 - 0 = 4
+# use linspace() function to generate the appropriate x values for the Riemann sum
+# function 1 is from x=2 to x=5 with 60 even sub-intervals
+x_values_1 = np.linspace(2, 5, 61)
+# function 2 is from x=0 to x=4 with 100 even sub-intervals
+x_values_2 = np.linspace(0, 4, 101)
 
-rectangle_base_1 = x_interval_1 / 60  # the width of each rectangle in first function
-rectangle_base_2 = x_interval_2 / 100  # the width of each rectangle in first function
+# these will keep a running total of the individual rectangle areas
+total_area_1 = total_area_2 = 0
 
-# these will be incremented by the rectangle base each time the program runs
-current_x_1 = 2
-current_x_2 = 0
+# define delta x for both functions. (b-a) / n
+delta_x_1 = (5 - 2) / 60
+delta_x_2 = (4 - 0) / 100
 
-# keep a running total of the total area under each curve
-total_area_1 = 0
-total_area_2 = 0
+# go from 0 to the second to last index. Left Riemann sums do not include the rightmost endpoint.
+for i in range(len(x_values_1) - 1):
+    # add f(xi) * delta x to the total rectangle areas
+    total_area_1 += f_1(x_values_1[i]) * delta_x_1
 
-# compute the area of rectangles in for-loop
-for i in range(0, 60):
-    # the area of the rectangle is the base multiplied by the function value at the x position
-    total_area_1 += rectangle_base_1 * f_1(current_x_1)
-    # update the x value for the next iteration
-    current_x_1 += rectangle_base_1
-
-# compute the area of rectangles in for-loop
-for i in range(0, 100):
-    # the area of the rectangle is the base multiplied by the function value at the x position
-    total_area_2 += rectangle_base_2 * f_2(current_x_2)
-    # update the x value for the next iteration
-    current_x_2 += rectangle_base_2
+for i in range(len(x_values_2) - 1):
+    # add f(xi) * delta x to the total rectangle areas
+    total_area_2 += f_2(x_values_2[i]) * delta_x_2
 
 # print descriptive output
 print('The approximate area under x^2 + 4 from 2 to 5 is approximately %.3f' % total_area_1)
