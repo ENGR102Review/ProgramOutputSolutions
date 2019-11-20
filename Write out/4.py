@@ -20,7 +20,7 @@ with open('data.csv') as file:
         year = int(split_line[3])
         plt.plot(value, sqft, 'b.')  # plots the current point
         # increment houses after 2000 counter if applicable
-        if year > 2000:
+        if year >= 2000:
             houses_after_2000 += 1
         # update most expensive value and address if applicable
         if value > most_expensive_value:
