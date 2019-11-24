@@ -12,6 +12,6 @@ for i in range(1, len(my_list) + 1):
     print(my_list[-i])
 
 # or you could use python's built in reversed() function
+# note that this goes through elements, not indexes!
 for element in reversed(my_list):
     print(element)
-## If you're allowed to, use the reversed() function!!! ##
