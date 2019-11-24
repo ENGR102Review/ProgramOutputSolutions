@@ -9,3 +9,5 @@ total_sum = 0
 for n in range(2, 92):
     # now use n in the expression following the sigma symbol and add it to the total
     total_sum += (3 * n + 8)
+
+print('The expression evaluates to %d' % total_sum)
